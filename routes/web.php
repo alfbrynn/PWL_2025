@@ -109,3 +109,7 @@ Route::get('/article/{id}', [ArticleController::class, 'article']);
 Route::resource('photos', PhotoController::class)->except([
     'create', 'store', 'update', 'destroy'
 ]);
+
+Route::get('/greeting', function () {
+    return view('hello', ['name' => 'Muhammad Alif Febriansyah']);
+});
